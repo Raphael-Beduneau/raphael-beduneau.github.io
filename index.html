@@ -1,127 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Carnet de compétences – ING4 S7</title>
+  <title>Raphaël Beduneau – Ingénieur Informatique et Réseaux</title>
+  <meta name="description" content="Portfolio de Raphaël Beduneau, étudiant ingénieur en informatique et cybersécurité à l’ESAIP, à la recherche d’un stage de 8 semaines à partir de juin 2027.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="nav">
+    <a class="logo" href="#accueil">RB</a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+    <nav id="menu">
+      <a href="#parcours">Parcours</a>
+      <a href="#formation">Formation</a>
+      <a href="#competences">Compétences</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
 
-<nav>
-  <a href="#qui">Qui je suis</a>
-  <a href="#exp">Expériences</a>
-  <a href="#synth">Compétences</a>
-  <a href="#metier">Métier visé</a>
-  <a href="#benevolat">Engagements</a>
-  <a href="#cv">CV</a>
-  <button id="btn-edit">✏️ Modifier</button>
-</nav>
-
-<header>
-  <h1 id="nom">Prénom NOM</h1>
-  <p>Élève-ingénieur ING4 · ESAIP – École d'Ingénieurs La Salle · Filière GRE4 / IR4</p>
-  <p class="mut">Carnet de compétences – Étape 1 · S7 · 2026-27</p>
-</header>
-
-<main id="content">
-
-  <section id="qui">
-    <h2>Qui je suis ?</h2>
-    <p>Présente-toi en quelques lignes : parcours, personnalité, ce qui te distingue.</p>
-    <div class="grid">
-      <div class="box"><h3>3 points forts</h3><ul><li>Point fort 1</li><li>Point fort 2</li><li>Point fort 3</li></ul></div>
-      <div class="box"><h3>3 points d'attention</h3><ul><li>Point d'attention 1</li><li>Point d'attention 2</li><li>Point d'attention 3</li></ul></div>
-      <div class="box"><h3>Pourquoi cette orientation ?</h3><p>Explique ton choix de filière et de métier.</p></div>
-      <div class="box"><h3>Ce qui me motive</h3><p>Dans un contexte professionnel…</p></div>
-      <div class="box"><h3>Un bon manager, c'est…</h3><p>Ta vision du management.</p></div>
-      <div class="box"><h3>Ma différence</h3><p>Ce qui fait ma valeur ajoutée.</p></div>
-    </div>
-  </section>
-
-  <section id="exp">
-    <h2>Mes expériences professionnelles</h2>
-    <p class="mut">1 à 3 expériences : stage, job étudiant, job d'été, projets de scolarité. (Description &amp; analyse : 6 pts)</p>
-    <div class="grid">
-      <div class="box">
-        <h3>Expérience 1 – Intitulé</h3>
-        <p class="mut">Structure · Dates · Durée</p>
-        <p><b>Contexte &amp; missions :</b> …</p>
-        <p><b>Compétences mises en œuvre :</b> …</p>
-        <p><b>Bilan :</b> …</p>
+  <main>
+    <section id="accueil" class="hero">
+      <div class="hero-text">
+        <p class="status"><span class="dot"></span>Recherche un stage de 8 semaines dès juin 2027</p>
+        <h1>Raphaël<br>Beduneau</h1>
+        <p class="role"><span id="typed"></span><span class="caret"></span></p>
+        <p class="lead">Étudiant en cycle ingénieur à l’ESAIP, spécialisé en cybersécurité. J’aime comprendre comment les systèmes et les réseaux fonctionnent, suivre un cahier des charges et travailler en équipe.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Me contacter</a>
+          <a class="btn ghost" href="#parcours">Voir mon parcours</a>
+        </div>
       </div>
-      <div class="box">
-        <h3>Expérience 2 – Intitulé</h3>
-        <p class="mut">Structure · Dates · Durée</p>
-        <p><b>Contexte &amp; missions :</b> …</p>
-        <p><b>Compétences mises en œuvre :</b> …</p>
-        <p><b>Bilan :</b> …</p>
+      <div class="hero-photo">
+        <div class="ring"><img src="assets/photo.jpg" alt="Portrait de Raphaël Beduneau" width="576" height="576"></div>
       </div>
-      <div class="box">
-        <h3>Expérience 3 – Intitulé</h3>
-        <p class="mut">Structure · Dates · Durée</p>
-        <p><b>Contexte &amp; missions :</b> …</p>
-        <p><b>Compétences mises en œuvre :</b> …</p>
-        <p><b>Bilan :</b> …</p>
+    </section>
+
+    <section id="parcours" class="section">
+      <h2>Parcours professionnel</h2>
+      <div class="timeline">
+        <article class="item">
+          <time>Juin – Juillet 2026</time>
+          <h3>Stage ouvrier</h3>
+          <p class="where">Fuste Carreras, Manresa – Barcelone, Espagne</p>
+          <ul>
+            <li>Aide à la migration d’ERP : participation à la transition vers un nouveau système.</li>
+            <li>Automatisation de tâches répétitives avec l’IA pour gagner du temps et limiter les erreurs de saisie.</li>
+            <li>Optimisation de la production : observation des flux en atelier et propositions d’amélioration.</li>
+          </ul>
+        </article>
+        <article class="item">
+          <time>Septembre 2024 – Septembre 2025</time>
+          <h3>Hôte de caisse</h3>
+          <p class="where">E. Leclerc Camus, Angers (49)</p>
+          <ul><li>Service client, polyvalence, travail en équipe et manutention.</li></ul>
+        </article>
+        <article class="item">
+          <time>Été 2024</time>
+          <h3>Agent de location</h3>
+          <p class="where">Service location, E. Leclerc Camus, Angers (49)</p>
+          <ul><li>Gestion des locations, service client, travail en équipe et manutention.</li></ul>
+        </article>
+        <article class="item">
+          <time>Février 2024</time>
+          <h3>Stage ouvrier</h3>
+          <p class="where">Pomone, Avrillé (49)</p>
+          <ul>
+            <li>Création de documents : support à la gestion de production, aide à l’organisation des plannings.</li>
+            <li>Inventaire : gestion des stocks au sein du service de maintenance technique.</li>
+          </ul>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="synth">
-    <h2>Synthèse des compétences développées</h2>
-    <p class="mut">(6 pts) Classe tes compétences et relie-les à tes expériences.</p>
-    <div class="scroll">
-      <table>
-        <tr><th>Compétence</th><th>Type</th><th>Expérience(s)</th><th>Niveau (1-4)</th></tr>
-        <tr><td>Compétence technique 1</td><td>Technique</td><td>Exp. 1</td><td>3</td></tr>
-        <tr><td>Compétence comportementale 1</td><td>Comportementale</td><td>Exp. 2</td><td>3</td></tr>
-        <tr><td>Compétence transversale 1</td><td>Transversale</td><td>Exp. 1, 3</td><td>2</td></tr>
-      </table>
-    </div>
-    <h3>Mes 3 + 3 + 3</h3>
-    <span class="tag">Technique 1</span><span class="tag">Technique 2</span><span class="tag">Technique 3</span>
-    <span class="tag o">Comportementale 1</span><span class="tag o">Comportementale 2</span><span class="tag o">Comportementale 3</span>
-    <span class="tag">Transversale 1</span><span class="tag">Transversale 2</span><span class="tag">Transversale 3</span>
-  </section>
-
-  <section id="metier">
-    <h2>Le métier que je vise</h2>
-    <p class="mut">(6 pts) Portrait robot du métier (sources : APEC, Cadremploi…) et analyse de l'écart avec mes compétences.</p>
-    <h3>Métier : Intitulé du métier</h3>
-    <div class="scroll">
-      <table>
-        <tr><th>Compétence requise</th><th>Catégorie</th><th>Acquise ?</th><th>Plan d'action</th></tr>
-        <tr><td>Compétence requise 1</td><td>Technique</td><td>✅ Oui</td><td>—</td></tr>
-        <tr><td>Compétence requise 2</td><td>Comportementale</td><td>🟠 En cours</td><td>Action à mener (stage, projet, formation…)</td></tr>
-        <tr><td>Compétence requise 3</td><td>Transversale</td><td>❌ À acquérir</td><td>Action à mener</td></tr>
-      </table>
-    </div>
-  </section>
-
-  <section id="benevolat">
-    <h2>Engagements bénévoles</h2>
-    <p class="mut">ING3 et S7 ING4. Une attestation prouvant l'engagement doit être fournie avec le livrable.</p>
-    <div class="grid">
-      <div class="box">
-        <h3>Association / action</h3>
-        <p>Rôle, durée, missions.</p>
-        <p><b>Compétences développées :</b> …</p>
-        <p class="mut">📎 Attestation : à joindre sur Moodle</p>
+    <section id="formation" class="section alt">
+      <h2>Formation</h2>
+      <div class="grid three">
+        <article class="card">
+          <time>Janvier – Avril 2026</time>
+          <h3>Semestre Erasmus</h3>
+          <p class="where">SeAMK, Seinäjoki – Finlande</p>
+          <p>Génie automatisation : automatisation industrielle, systèmes de contrôle, programmation d’automates (PLC), introduction à l’IA et à l’IoT.</p>
+        </article>
+        <article class="card">
+          <time>2025 – 2028</time>
+          <h3>Cycle ingénieur</h3>
+          <p class="where">ESAIP, Saint-Barthélemy-d’Anjou (49)</p>
+          <p>Cycle ingénieur en cybersécurité. Première année validée dans la spécialité.</p>
+        </article>
+        <article class="card">
+          <time>2023 – 2025</time>
+          <h3>Cycle préparatoire intégré</h3>
+          <p class="where">ESAIP, Saint-Barthélemy-d’Anjou (49)</p>
+          <p>Cycle préparatoire en ingénierie numérique sur 2 ans.</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="cv">
-    <h2>Mon CV</h2>
-    <p>Dernière mise à jour : <b>JJ/MM/2026</b></p>
-    <p><a class="cv-link" href="cv.pdf">Télécharger mon CV (PDF)</a> – place ton fichier <code>cv.pdf</code> dans le même dossier.</p>
-    <ul><li>Formation</li><li>Expériences</li><li>Compétences &amp; langues</li><li>Engagements &amp; centres d'intérêt</li></ul>
-  </section>
+    <section id="competences" class="section">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <div class="skill-block">
+          <h3>Techniques</h3>
+          <div class="tags">
+            <span>Python</span><span>C++</span><span>HTML / CSS</span><span>JavaScript</span><span>UML</span>
+            <span>VMware Workstation</span><span>Wireshark</span><span>Cisco</span><span>TCP/IP</span><span>DNS</span><span>DHCP</span>
+            <span>Windows</span><span>Linux</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3>Langues</h3>
+          <ul class="langs">
+            <li><span>Français</span><em>Langue maternelle</em><i style="--w:100%"></i></li>
+            <li><span>Anglais</span><em>C1 · TOEIC 975/990</em><i style="--w:92%"></i></li>
+            <li><span>Espagnol</span><em>B1</em><i style="--w:50%"></i></li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>Transversales</h3>
+          <div class="tags soft"><span>Travail en équipe</span><span>Autonomie</span><span>Rigueur</span><span>Esprit d’analyse</span></div>
+        </div>
+        <div class="skill-block">
+          <h3>Comportementales</h3>
+          <div class="tags soft"><span>Capacité d’adaptation</span><span>Esprit d’initiative</span><span>Curiosité</span></div>
+        </div>
+      </div>
+    </section>
 
-</main>
+    <section id="engagements" class="section alt">
+      <h2>Engagements et loisirs</h2>
+      <div class="grid two">
+        <article class="card">
+          <time>Octobre 2026 – Octobre 2027</time>
+          <h3>Trésorier de l’association Innov’Lab</h3>
+          <ul>
+            <li>Gestion du budget, maîtrise et analyse des chiffres.</li>
+            <li>Rédaction de documents officiels, respect des procédures.</li>
+            <li>Projets de homelab, développement de sites web et projets étudiants.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <time>Juin – Juillet 2020</time>
+          <h3>Service National Universel</h3>
+          <ul>
+            <li>Cohésion de groupe, travail en équipe et autonomie.</li>
+            <li>Engagement civique et citoyenneté.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="hobbies">Hors écran : piano, chorale, lecture et tennis de table.</p>
+    </section>
 
-<footer>ESAIP ING4 – PPP 2026-27 · Orthographe et présentation soignées (2 pts) ✔</footer>
+    <section id="contact" class="section contact">
+      <h2>Travaillons ensemble</h2>
+      <p>Je cherche un stage de 8 semaines à partir de juin 2027. Écrivez-moi, je réponds rapidement.</p>
+      <div class="actions center">
+        <a class="btn primary" href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a>
+        <a class="btn ghost" href="tel:+33607218701">06 07 21 87 01</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="small">Permis B</p>
+    </section>
+  </main>
 
-<script src="script.js"></script>
+  <footer><p>© <span id="year"></span> Raphaël Beduneau</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>

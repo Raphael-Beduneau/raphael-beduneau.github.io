@@ -1,44 +1,64 @@
-// Carnet de compétences – mode édition + sauvegarde dans le navigateur
-const STORAGE_KEY = "carnet-ing4-v1";
+document.documentElement.classList.add('js');
 
-const content = document.getElementById("content");
-const nom = document.getElementById("nom");
-const btnEdit = document.getElementById("btn-edit");
-let editing = false;
+// Année du pied de page
+document.getElementById('year').textContent = new Date().getFullYear();
 
-// Restauration des données sauvegardées
-try {
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved) {
-    const data = JSON.parse(saved);
-    content.innerHTML = data.content;
-    nom.textContent = data.nom;
-  }
-} catch (e) {
-  console.warn("Lecture du stockage impossible :", e);
-}
-
-// Sauvegarde
-function save() {
-  try {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ content: content.innerHTML, nom: nom.textContent })
-    );
-  } catch (e) {
-    console.warn("Sauvegarde impossible :", e);
-  }
-}
-
-// Bouton Modifier / Terminer
-btnEdit.addEventListener("click", () => {
-  editing = !editing;
-  content.contentEditable = editing;
-  nom.contentEditable = editing;
-  document.body.classList.toggle("edit", editing);
-  btnEdit.textContent = editing ? "💾 Terminer" : "✏️ Modifier";
-  if (!editing) save();
+// Menu mobile
+const burger = document.querySelector('.burger');
+const menu = document.getElementById('menu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
 });
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+}));
 
-content.addEventListener("input", save);
-nom.addEventListener("input", save);
+// Bordure de la barre de navigation au défilement
+const nav = document.querySelector('.nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), { passive: true });
+
+// Lien actif selon la section visible
+const links = [...menu.querySelectorAll('a:not(.nav-cta)')];
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+    }
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
+
+// Texte animé du titre
+const roles = ['Ingénieur Informatique et Réseaux', 'Étudiant en cybersécurité', 'Passionné d’automatisation et d’IoT'];
+const typed = document.getElementById('typed');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduce) {
+  typed.textContent = roles[0];
+} else {
+  let r = 0, i = 0, deleting = false;
+  (function tick() {
+    const word = roles[r];
+    typed.textContent = word.slice(0, i);
+    if (!deleting && i === word.length) { deleting = true; return setTimeout(tick, 1800); }
+    if (deleting && i === 0) { deleting = false; r = (r + 1) % roles.length; }
+    i += deleting ? -1 : 1;
+    setTimeout(tick, deleting ? 30 : 60);
+  })();
+}
+
+// Apparition au défilement
+const targets = document.querySelectorAll('.item, .card, .skill-block, .contact > *');
+targets.forEach(t => t.classList.add('reveal'));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      const langs = e.target.querySelector('.langs');
+      if (langs) langs.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: .15 });
+targets.forEach(t => io.observe(t));
