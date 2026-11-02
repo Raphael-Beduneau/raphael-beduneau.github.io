@@ -10,65 +10,125 @@
 <body>
 
 <nav>
-  <a href="#qui">Qui je suis</a>
+  <a href="#qui">Profil</a>
   <a href="#exp">Expériences</a>
   <a href="#synth">Compétences</a>
   <a href="#metier">Métier visé</a>
   <a href="#benevolat">Engagements</a>
-  <a href="#cv">CV &amp; contact</a>
+  <a href="#cv">Contact</a>
 </nav>
 
 <header>
-  <img class="photo" src="assets/photo.jpg" alt="Portrait de Raphaël Beduneau" width="144" height="144">
-  <h1 id="nom">Raphaël BEDUNEAU</h1>
-  <p>Élève-ingénieur en cybersécurité · ESAIP, Saint-Barthélemy-d’Anjou (49)</p>
-  <p class="mut">Recherche un stage de 8 semaines à partir de juin 2027</p>
+  <img src="assets/photo.jpg" alt="Portrait de Raphaël Beduneau" width="132" height="132">
+  <div>
+    <h1>Raphaël Beduneau</h1>
+    <p>Élève-ingénieur en cybersécurité · ESAIP, Saint-Barthélemy-d’Anjou (49)</p>
+    <p class="sub">Recherche un stage de 8 semaines à partir de juin 2027</p>
+  </div>
 </header>
 
-<main id="content">
+<main>
 
   <section id="qui">
-    <h2>Qui je suis ?</h2>
+    <h2>Profil</h2>
+    <p class="lead">Qui je suis, ce qui me motive et ce qui me distingue.</p>
+
+    <h3>Présentation</h3>
     <p>Étudiant en cycle ingénieur à l’ESAIP, j’ai suivi deux ans de cycle préparatoire en ingénierie numérique avant de me spécialiser en cybersécurité. Un semestre Erasmus en Finlande et un stage en Espagne m’ont appris à m’adapter vite à un nouvel environnement, en anglais comme en espagnol.</p>
-    <div class="grid">
-      <div class="box"><h3>3 points forts</h3><ul><li>Anglais courant (C1, TOEIC 975/990)</li><li>Adaptabilité : Erasmus en Finlande, stage en Espagne</li><li>Rigueur et esprit d’analyse</li></ul></div>
-      <div class="box"><h3>3 points d’attention</h3><ul><li>Espagnol à consolider (B1)</li><li>Expérience encore limitée en cybersécurité opérationnelle</li><li>Projets à mieux documenter en ligne</li></ul></div>
-      <div class="box"><h3>Pourquoi cette orientation ?</h3><p>Les réseaux et la sécurité des systèmes me passionnent. Je les pratique déjà en homelab et au sein de l’association Innov’Lab.</p></div>
-      <div class="box"><h3>Ce qui me motive</h3><p>Comprendre comment un système fonctionne, puis le rendre plus fiable et plus sûr, en équipe et en suivant un cahier des charges.</p></div>
-      <div class="box"><h3>Un bon manager, c’est…</h3><p>Quelqu’un qui fixe un cadre clair, fait confiance et donne un retour franc.</p></div>
-      <div class="box"><h3>Ma différence</h3><p>Un profil réseaux et cybersécurité, nourri d’automatisation industrielle (PLC, IoT) et d’expériences à l’international.</p></div>
+
+    <h3>Forces et axes de progrès</h3>
+    <div class="cards two">
+      <div class="card">
+        <h4>Points forts</h4>
+        <ul><li>Anglais courant (C1, TOEIC 975/990)</li><li>Adaptabilité : Erasmus en Finlande, stage en Espagne</li><li>Rigueur et esprit d’analyse</li></ul>
+      </div>
+      <div class="card">
+        <h4>Points d’attention</h4>
+        <ul><li>Espagnol à consolider (B1)</li><li>Expérience encore limitée en cybersécurité opérationnelle</li><li>Projets à mieux documenter en ligne</li></ul>
+      </div>
+    </div>
+
+    <h3>Motivations et valeurs</h3>
+    <div class="cards two">
+      <div class="card">
+        <h4>Pourquoi cette orientation ?</h4>
+        <p>Les réseaux et la sécurité des systèmes me passionnent. Je les pratique déjà en homelab et au sein de l’association Innov’Lab.</p>
+      </div>
+      <div class="card">
+        <h4>Ce qui me motive</h4>
+        <p>Comprendre comment un système fonctionne, puis le rendre plus fiable et plus sûr, en équipe et en suivant un cahier des charges.</p>
+      </div>
+      <div class="card">
+        <h4>Un bon manager, c’est…</h4>
+        <p>Quelqu’un qui fixe un cadre clair, fait confiance et donne un retour franc.</p>
+      </div>
+      <div class="card">
+        <h4>Ma différence</h4>
+        <p>Un profil réseaux et cybersécurité, nourri d’automatisation industrielle (PLC, IoT) et d’expériences à l’international.</p>
+      </div>
     </div>
   </section>
 
   <section id="exp">
-    <h2>Mes expériences professionnelles</h2>
-    <div class="grid">
-      <div class="box">
-        <h3>Stage ouvrier – Fuste Carreras</h3>
-        <p class="mut">Manresa – Barcelone, Espagne · Juin – Juillet 2026</p>
-        <p><b>Contexte &amp; missions :</b> aide à la migration d’ERP vers un nouveau système. Identification de tâches répétitives et automatisation avec l’IA. Observation des flux en atelier et pistes d’amélioration de la production.</p>
-        <p><b>Compétences mises en œuvre :</b> analyse, automatisation, rigueur, communication en espagnol et en anglais.</p>
-        <p><b>Bilan :</b> j’ai appris à travailler dans un environnement étranger et à proposer des solutions à partir de constats concrets.</p>
+    <h2>Expériences professionnelles</h2>
+    <p class="lead">Stages et emplois, du plus récent au plus ancien.</p>
+
+    <h3>Stages</h3>
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h4>Stage ouvrier</h4>
+          <p class="org">Fuste Carreras · Manresa – Barcelone, Espagne</p>
+        </div>
+        <p class="date">Juin – Juillet 2026</p>
       </div>
-      <div class="box">
-        <h3>Hôte de caisse et agent de location – E. Leclerc Camus</h3>
-        <p class="mut">Angers (49) · Été 2024, puis Septembre 2024 – Septembre 2025</p>
-        <p><b>Contexte &amp; missions :</b> gestion des locations au service location, puis poste de caisse : accueil et service client, manutention.</p>
-        <p><b>Compétences mises en œuvre :</b> relation client, polyvalence, travail en équipe.</p>
-        <p><b>Bilan :</b> un an d’emploi en parallèle des études, qui m’a donné de la régularité et le sens du service.</p>
+      <h5>Missions</h5>
+      <p>Aide à la migration d’ERP vers un nouveau système. Identification de tâches répétitives et automatisation avec l’IA. Observation des flux en atelier et pistes d’amélioration de la production.</p>
+      <h5>Compétences mises en œuvre</h5>
+      <p>Analyse, automatisation, rigueur, communication en espagnol et en anglais.</p>
+      <h5>Bilan</h5>
+      <p>J’ai appris à travailler dans un environnement étranger et à proposer des solutions à partir de constats concrets.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h4>Stage ouvrier</h4>
+          <p class="org">Pomone · Avrillé (49)</p>
+        </div>
+        <p class="date">Février 2024</p>
       </div>
-      <div class="box">
-        <h3>Stage ouvrier – Pomone</h3>
-        <p class="mut">Avrillé (49) · Février 2024</p>
-        <p><b>Contexte &amp; missions :</b> support à la gestion de production, création de documents, aide à l’organisation des plannings, inventaire des stocks au service de maintenance technique.</p>
-        <p><b>Compétences mises en œuvre :</b> organisation, rigueur, suivi de procédures.</p>
-        <p><b>Bilan :</b> première découverte du fonctionnement d’une entreprise industrielle.</p>
+      <h5>Missions</h5>
+      <p>Support à la gestion de production, création de documents, aide à l’organisation des plannings, inventaire des stocks au service de maintenance technique.</p>
+      <h5>Compétences mises en œuvre</h5>
+      <p>Organisation, rigueur, suivi de procédures.</p>
+      <h5>Bilan</h5>
+      <p>Première découverte du fonctionnement d’une entreprise industrielle.</p>
+    </article>
+
+    <h3>Emplois</h3>
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h4>Hôte de caisse et agent de location</h4>
+          <p class="org">E. Leclerc Camus · Angers (49)</p>
+        </div>
+        <p class="date">Été 2024, puis septembre 2024 – septembre 2025</p>
       </div>
-    </div>
+      <h5>Missions</h5>
+      <p>Gestion des locations au service location, puis poste de caisse : accueil et service client, manutention.</p>
+      <h5>Compétences mises en œuvre</h5>
+      <p>Relation client, polyvalence, travail en équipe.</p>
+      <h5>Bilan</h5>
+      <p>Un an d’emploi en parallèle des études, qui m’a donné de la régularité et le sens du service.</p>
+    </article>
   </section>
 
   <section id="synth">
-    <h2>Synthèse des compétences</h2>
+    <h2>Compétences</h2>
+    <p class="lead">Ce que je sais faire et où je l’ai développé.</p>
+
+    <h3>Tableau de synthèse</h3>
     <div class="scroll">
       <table>
         <tr><th>Compétence</th><th>Type</th><th>Expérience(s)</th></tr>
@@ -81,59 +141,85 @@
         <tr><td>Anglais (C1), espagnol (B1)</td><td>Transversale</td><td>Erasmus, Fuste Carreras</td></tr>
       </table>
     </div>
+
     <h3>Mes 3 + 3 + 3</h3>
-    <span class="tag">Python</span><span class="tag">Réseaux</span><span class="tag">Admin Windows / Linux</span>
-    <span class="tag o">Adaptabilité</span><span class="tag o">Initiative</span><span class="tag o">Curiosité</span>
-    <span class="tag">Travail en équipe</span><span class="tag">Rigueur</span><span class="tag">Anglais</span>
+    <div class="cards three">
+      <div class="card"><h4>Techniques</h4><p>Python, réseaux, administration Windows / Linux</p></div>
+      <div class="card"><h4>Comportementales</h4><p>Adaptabilité, initiative, curiosité</p></div>
+      <div class="card"><h4>Transversales</h4><p>Travail en équipe, rigueur, anglais</p></div>
+    </div>
   </section>
 
   <section id="metier">
-    <h2>Le métier que je vise</h2>
-    <h3>Métier : ingénieur cybersécurité / réseaux</h3>
+    <h2>Métier visé</h2>
+    <p class="lead">Ingénieur cybersécurité / réseaux.</p>
+
+    <h3>Écart entre le métier et mes compétences</h3>
     <div class="scroll">
       <table>
         <tr><th>Compétence requise</th><th>Catégorie</th><th>Acquise ?</th><th>Plan d’action</th></tr>
-        <tr><td>Réseaux et protocoles</td><td>Technique</td><td>✅ Oui</td><td>—</td></tr>
-        <tr><td>Administration systèmes Windows / Linux</td><td>Technique</td><td>✅ Oui</td><td>—</td></tr>
-        <tr><td>Sécurité offensive et défensive</td><td>Technique</td><td>🟠 En cours</td><td>Cycle ingénieur cybersécurité, homelab, stage de juin 2027</td></tr>
-        <tr><td>Communication en anglais</td><td>Transversale</td><td>✅ Oui</td><td>—</td></tr>
-        <tr><td>Gestion de projet et de risques</td><td>Transversale</td><td>🟠 En cours</td><td>Projets Innov’Lab, cours de l’ESAIP</td></tr>
+        <tr><td>Réseaux et protocoles</td><td>Technique</td><td>Oui</td><td>—</td></tr>
+        <tr><td>Administration systèmes Windows / Linux</td><td>Technique</td><td>Oui</td><td>—</td></tr>
+        <tr><td>Sécurité offensive et défensive</td><td>Technique</td><td>En cours</td><td>Cycle ingénieur cybersécurité, homelab, stage de juin 2027</td></tr>
+        <tr><td>Communication en anglais</td><td>Transversale</td><td>Oui</td><td>—</td></tr>
+        <tr><td>Gestion de projet et de risques</td><td>Transversale</td><td>En cours</td><td>Projets Innov’Lab, cours de l’ESAIP</td></tr>
       </table>
     </div>
   </section>
 
   <section id="benevolat">
     <h2>Engagements et loisirs</h2>
-    <div class="grid">
-      <div class="box">
-        <h3>Trésorier – Innov’Lab</h3>
-        <p class="mut">Octobre 2026 – Octobre 2027</p>
-        <p>Gestion du budget, rédaction de documents officiels, projets de homelab, de sites web et projets étudiants.</p>
-        <p><b>Compétences développées :</b> gestion, rigueur, travail en équipe.</p>
+    <p class="lead">Vie associative, citoyenneté et centres d’intérêt.</p>
+
+    <h3>Engagements</h3>
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h4>Trésorier</h4>
+          <p class="org">Association Innov’Lab</p>
+        </div>
+        <p class="date">Octobre 2026 – octobre 2027</p>
       </div>
-      <div class="box">
-        <h3>Service National Universel</h3>
-        <p class="mut">Juin – Juillet 2020</p>
-        <p>Cohésion de groupe, engagement civique et citoyenneté.</p>
-        <p><b>Compétences développées :</b> autonomie, travail en équipe.</p>
+      <h5>Missions</h5>
+      <p>Gestion du budget, rédaction de documents officiels, projets de homelab, de sites web et projets étudiants.</p>
+      <h5>Compétences développées</h5>
+      <p>Gestion, rigueur, travail en équipe.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <div>
+          <h4>Service National Universel</h4>
+          <p class="org">Engagement citoyen</p>
+        </div>
+        <p class="date">Juin – juillet 2020</p>
       </div>
-      <div class="box">
-        <h3>Loisirs</h3>
-        <p>Piano, chorale, lecture, tennis de table.</p>
-      </div>
-    </div>
+      <h5>Missions</h5>
+      <p>Cohésion de groupe, engagement civique et citoyenneté.</p>
+      <h5>Compétences développées</h5>
+      <p>Autonomie, travail en équipe.</p>
+    </article>
+
+    <h3>Loisirs</h3>
+    <div class="card"><p>Piano, chorale, lecture, tennis de table.</p></div>
   </section>
 
   <section id="cv">
-    <h2>Mon CV et mes contacts</h2>
-    <p>Dernière mise à jour : <b>02/11/2026</b></p>
-    <p><a class="cv-link" href="cv.pdf">Télécharger mon CV (PDF)</a> <span class="mut">(place ton fichier <code>cv.pdf</code> à côté de <code>index.html</code>)</span></p>
-    <ul>
-      <li><a class="cv-link" href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a></li>
-      <li><a class="cv-link" href="tel:+33607218701">06 07 21 87 01</a></li>
-      <li><a class="cv-link" href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">linkedin.com/in/raphael-beduneau</a></li>
-      <li>Permis B</li>
-    </ul>
+    <h2>CV et contact</h2>
+    <p class="lead">Me contacter ou télécharger mon CV.</p>
+
+    <h3>Mon CV</h3>
+    <div class="card"><p><a href="cv.pdf">Télécharger mon CV (PDF)</a></p></div>
+
+    <h3>Coordonnées</h3>
+    <div class="card">
+      <ul class="plain">
+        <li><a href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a></li>
+        <li><a href="tel:+33607218701">06 07 21 87 01</a></li>
+        <li><a href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">linkedin.com/in/raphael-beduneau</a></li>
+        <li>Permis B</li>
+      </ul>
+    </div>
   </section>
 
 </main>
