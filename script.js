@@ -1,64 +1,56 @@
-document.documentElement.classList.add('js');
+// Portfolio – mode édition + sauvegarde dans le navigateur
+const STORAGE_KEY = "portfolio-beduneau-v1";
 
-// Année du pied de page
-document.getElementById('year').textContent = new Date().getFullYear();
+const content = document.getElementById("content");
+const nom = document.getElementById("nom");
+const btnEdit = document.getElementById("btn-edit");
+let editing = false;
 
-// Menu mobile
-const burger = document.querySelector('.burger');
-const menu = document.getElementById('menu');
-burger.addEventListener('click', () => {
-  const open = menu.classList.toggle('open');
-  burger.setAttribute('aria-expanded', open);
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Restauration des modifications faites dans ce navigateur
+try {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    const data = JSON.parse(saved);
+    content.innerHTML = data.content;
+    nom.textContent = data.nom;
+  }
+} catch (e) {
+  console.warn("Lecture du stockage impossible :", e);
+}
+
+function save() {
+  try {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ content: content.innerHTML, nom: nom.textContent })
+    );
+  } catch (e) {
+    console.warn("Sauvegarde impossible :", e);
+  }
+}
+
+// Bouton Modifier / Terminer
+btnEdit.addEventListener("click", () => {
+  editing = !editing;
+  content.contentEditable = editing;
+  nom.contentEditable = editing;
+  document.body.classList.toggle("edit", editing);
+  btnEdit.textContent = editing ? "💾 Terminer" : "✏️ Modifier";
+  if (!editing) save();
 });
-menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  menu.classList.remove('open');
-  burger.setAttribute('aria-expanded', 'false');
-}));
 
-// Bordure de la barre de navigation au défilement
-const nav = document.querySelector('.nav');
-addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), { passive: true });
+content.addEventListener("input", save);
+nom.addEventListener("input", save);
 
-// Lien actif selon la section visible
-const links = [...menu.querySelectorAll('a:not(.nav-cta)')];
+// Lien actif dans la navigation
+const links = [...document.querySelectorAll("nav a")];
 const spy = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id));
     }
   });
-}, { rootMargin: '-45% 0px -50% 0px' });
-document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
-
-// Texte animé du titre
-const roles = ['Ingénieur Informatique et Réseaux', 'Étudiant en cybersécurité', 'Passionné d’automatisation et d’IoT'];
-const typed = document.getElementById('typed');
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (reduce) {
-  typed.textContent = roles[0];
-} else {
-  let r = 0, i = 0, deleting = false;
-  (function tick() {
-    const word = roles[r];
-    typed.textContent = word.slice(0, i);
-    if (!deleting && i === word.length) { deleting = true; return setTimeout(tick, 1800); }
-    if (deleting && i === 0) { deleting = false; r = (r + 1) % roles.length; }
-    i += deleting ? -1 : 1;
-    setTimeout(tick, deleting ? 30 : 60);
-  })();
-}
-
-// Apparition au défilement
-const targets = document.querySelectorAll('.item, .card, .skill-block, .contact > *');
-targets.forEach(t => t.classList.add('reveal'));
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      const langs = e.target.querySelector('.langs');
-      if (langs) langs.classList.add('in');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: .15 });
-targets.forEach(t => io.observe(t));
+}, { rootMargin: "-45% 0px -50% 0px" });
+document.querySelectorAll("main section[id]").forEach(s => spy.observe(s));

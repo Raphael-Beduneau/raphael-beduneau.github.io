@@ -1,173 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Raphaël Beduneau – Ingénieur Informatique et Réseaux</title>
-  <meta name="description" content="Portfolio de Raphaël Beduneau, étudiant ingénieur en informatique et cybersécurité à l’ESAIP, à la recherche d’un stage de 8 semaines à partir de juin 2027.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Raphaël Beduneau – Portfolio</title>
+  <meta name="description" content="Portfolio de Raphaël Beduneau, élève-ingénieur en cybersécurité à l’ESAIP, à la recherche d’un stage de 8 semaines dès juin 2027.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="logo" href="#accueil">RB</a>
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
-    <nav id="menu">
-      <a href="#parcours">Parcours</a>
-      <a href="#formation">Formation</a>
-      <a href="#competences">Compétences</a>
-      <a href="#engagements">Engagements</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="accueil" class="hero">
-      <div class="hero-text">
-        <p class="status"><span class="dot"></span>Recherche un stage de 8 semaines dès juin 2027</p>
-        <h1>Raphaël<br>Beduneau</h1>
-        <p class="role"><span id="typed"></span><span class="caret"></span></p>
-        <p class="lead">Étudiant en cycle ingénieur à l’ESAIP, spécialisé en cybersécurité. J’aime comprendre comment les systèmes et les réseaux fonctionnent, suivre un cahier des charges et travailler en équipe.</p>
-        <div class="actions">
-          <a class="btn primary" href="#contact">Me contacter</a>
-          <a class="btn ghost" href="#parcours">Voir mon parcours</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <div class="ring"><img src="assets/photo.jpg" alt="Portrait de Raphaël Beduneau" width="576" height="576"></div>
-      </div>
-    </section>
+<nav>
+  <a href="#qui">Qui je suis</a>
+  <a href="#exp">Expériences</a>
+  <a href="#synth">Compétences</a>
+  <a href="#metier">Métier visé</a>
+  <a href="#benevolat">Engagements</a>
+  <a href="#cv">CV &amp; contact</a>
+  <button id="btn-edit">✏️ Modifier</button>
+</nav>
 
-    <section id="parcours" class="section">
-      <h2>Parcours professionnel</h2>
-      <div class="timeline">
-        <article class="item">
-          <time>Juin – Juillet 2026</time>
-          <h3>Stage ouvrier</h3>
-          <p class="where">Fuste Carreras, Manresa – Barcelone, Espagne</p>
-          <ul>
-            <li>Aide à la migration d’ERP : participation à la transition vers un nouveau système.</li>
-            <li>Automatisation de tâches répétitives avec l’IA pour gagner du temps et limiter les erreurs de saisie.</li>
-            <li>Optimisation de la production : observation des flux en atelier et propositions d’amélioration.</li>
-          </ul>
-        </article>
-        <article class="item">
-          <time>Septembre 2024 – Septembre 2025</time>
-          <h3>Hôte de caisse</h3>
-          <p class="where">E. Leclerc Camus, Angers (49)</p>
-          <ul><li>Service client, polyvalence, travail en équipe et manutention.</li></ul>
-        </article>
-        <article class="item">
-          <time>Été 2024</time>
-          <h3>Agent de location</h3>
-          <p class="where">Service location, E. Leclerc Camus, Angers (49)</p>
-          <ul><li>Gestion des locations, service client, travail en équipe et manutention.</li></ul>
-        </article>
-        <article class="item">
-          <time>Février 2024</time>
-          <h3>Stage ouvrier</h3>
-          <p class="where">Pomone, Avrillé (49)</p>
-          <ul>
-            <li>Création de documents : support à la gestion de production, aide à l’organisation des plannings.</li>
-            <li>Inventaire : gestion des stocks au sein du service de maintenance technique.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+<header>
+  <img class="photo" src="assets/photo.jpg" alt="Portrait de Raphaël Beduneau" width="144" height="144">
+  <h1 id="nom">Raphaël BEDUNEAU</h1>
+  <p>Élève-ingénieur en cybersécurité · ESAIP, Saint-Barthélemy-d’Anjou (49)</p>
+  <p class="mut">Recherche un stage de 8 semaines à partir de juin 2027</p>
+</header>
 
-    <section id="formation" class="section alt">
-      <h2>Formation</h2>
-      <div class="grid three">
-        <article class="card">
-          <time>Janvier – Avril 2026</time>
-          <h3>Semestre Erasmus</h3>
-          <p class="where">SeAMK, Seinäjoki – Finlande</p>
-          <p>Génie automatisation : automatisation industrielle, systèmes de contrôle, programmation d’automates (PLC), introduction à l’IA et à l’IoT.</p>
-        </article>
-        <article class="card">
-          <time>2025 – 2028</time>
-          <h3>Cycle ingénieur</h3>
-          <p class="where">ESAIP, Saint-Barthélemy-d’Anjou (49)</p>
-          <p>Cycle ingénieur en cybersécurité. Première année validée dans la spécialité.</p>
-        </article>
-        <article class="card">
-          <time>2023 – 2025</time>
-          <h3>Cycle préparatoire intégré</h3>
-          <p class="where">ESAIP, Saint-Barthélemy-d’Anjou (49)</p>
-          <p>Cycle préparatoire en ingénierie numérique sur 2 ans.</p>
-        </article>
-      </div>
-    </section>
+<main id="content">
 
-    <section id="competences" class="section">
-      <h2>Compétences</h2>
-      <div class="skills">
-        <div class="skill-block">
-          <h3>Techniques</h3>
-          <div class="tags">
-            <span>Python</span><span>C++</span><span>HTML / CSS</span><span>JavaScript</span><span>UML</span>
-            <span>VMware Workstation</span><span>Wireshark</span><span>Cisco</span><span>TCP/IP</span><span>DNS</span><span>DHCP</span>
-            <span>Windows</span><span>Linux</span>
-          </div>
-        </div>
-        <div class="skill-block">
-          <h3>Langues</h3>
-          <ul class="langs">
-            <li><span>Français</span><em>Langue maternelle</em><i style="--w:100%"></i></li>
-            <li><span>Anglais</span><em>C1 · TOEIC 975/990</em><i style="--w:92%"></i></li>
-            <li><span>Espagnol</span><em>B1</em><i style="--w:50%"></i></li>
-          </ul>
-        </div>
-        <div class="skill-block">
-          <h3>Transversales</h3>
-          <div class="tags soft"><span>Travail en équipe</span><span>Autonomie</span><span>Rigueur</span><span>Esprit d’analyse</span></div>
-        </div>
-        <div class="skill-block">
-          <h3>Comportementales</h3>
-          <div class="tags soft"><span>Capacité d’adaptation</span><span>Esprit d’initiative</span><span>Curiosité</span></div>
-        </div>
-      </div>
-    </section>
+  <section id="qui">
+    <h2>Qui je suis ?</h2>
+    <p>Étudiant en cycle ingénieur à l’ESAIP, j’ai suivi deux ans de cycle préparatoire en ingénierie numérique avant de me spécialiser en cybersécurité. Un semestre Erasmus en Finlande et un stage en Espagne m’ont appris à m’adapter vite à un nouvel environnement, en anglais comme en espagnol.</p>
+    <div class="grid">
+      <div class="box"><h3>3 points forts</h3><ul><li>Anglais courant (C1, TOEIC 975/990)</li><li>Adaptabilité : Erasmus en Finlande, stage en Espagne</li><li>Rigueur et esprit d’analyse</li></ul></div>
+      <div class="box"><h3>3 points d’attention</h3><ul><li>Espagnol à consolider (B1)</li><li>Expérience encore limitée en cybersécurité opérationnelle</li><li>Projets à mieux documenter en ligne</li></ul></div>
+      <div class="box"><h3>Pourquoi cette orientation ?</h3><p>Les réseaux et la sécurité des systèmes me passionnent. Je les pratique déjà en homelab et au sein de l’association Innov’Lab.</p></div>
+      <div class="box"><h3>Ce qui me motive</h3><p>Comprendre comment un système fonctionne, puis le rendre plus fiable et plus sûr, en équipe et en suivant un cahier des charges.</p></div>
+      <div class="box"><h3>Un bon manager, c’est…</h3><p>Quelqu’un qui fixe un cadre clair, fait confiance et donne un retour franc.</p></div>
+      <div class="box"><h3>Ma différence</h3><p>Un profil réseaux et cybersécurité, nourri d’automatisation industrielle (PLC, IoT) et d’expériences à l’international.</p></div>
+    </div>
+  </section>
 
-    <section id="engagements" class="section alt">
-      <h2>Engagements et loisirs</h2>
-      <div class="grid two">
-        <article class="card">
-          <time>Octobre 2026 – Octobre 2027</time>
-          <h3>Trésorier de l’association Innov’Lab</h3>
-          <ul>
-            <li>Gestion du budget, maîtrise et analyse des chiffres.</li>
-            <li>Rédaction de documents officiels, respect des procédures.</li>
-            <li>Projets de homelab, développement de sites web et projets étudiants.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <time>Juin – Juillet 2020</time>
-          <h3>Service National Universel</h3>
-          <ul>
-            <li>Cohésion de groupe, travail en équipe et autonomie.</li>
-            <li>Engagement civique et citoyenneté.</li>
-          </ul>
-        </article>
+  <section id="exp">
+    <h2>Mes expériences professionnelles</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>Stage ouvrier – Fuste Carreras</h3>
+        <p class="mut">Manresa – Barcelone, Espagne · Juin – Juillet 2026</p>
+        <p><b>Contexte &amp; missions :</b> aide à la migration d’ERP vers un nouveau système. Identification de tâches répétitives et automatisation avec l’IA. Observation des flux en atelier et pistes d’amélioration de la production.</p>
+        <p><b>Compétences mises en œuvre :</b> analyse, automatisation, rigueur, communication en espagnol et en anglais.</p>
+        <p><b>Bilan :</b> j’ai appris à travailler dans un environnement étranger et à proposer des solutions à partir de constats concrets.</p>
       </div>
-      <p class="hobbies">Hors écran : piano, chorale, lecture et tennis de table.</p>
-    </section>
-
-    <section id="contact" class="section contact">
-      <h2>Travaillons ensemble</h2>
-      <p>Je cherche un stage de 8 semaines à partir de juin 2027. Écrivez-moi, je réponds rapidement.</p>
-      <div class="actions center">
-        <a class="btn primary" href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a>
-        <a class="btn ghost" href="tel:+33607218701">06 07 21 87 01</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="box">
+        <h3>Hôte de caisse et agent de location – E. Leclerc Camus</h3>
+        <p class="mut">Angers (49) · Été 2024, puis Septembre 2024 – Septembre 2025</p>
+        <p><b>Contexte &amp; missions :</b> gestion des locations au service location, puis poste de caisse : accueil et service client, manutention.</p>
+        <p><b>Compétences mises en œuvre :</b> relation client, polyvalence, travail en équipe.</p>
+        <p><b>Bilan :</b> un an d’emploi en parallèle des études, qui m’a donné de la régularité et le sens du service.</p>
       </div>
-      <p class="small">Permis B</p>
-    </section>
-  </main>
+      <div class="box">
+        <h3>Stage ouvrier – Pomone</h3>
+        <p class="mut">Avrillé (49) · Février 2024</p>
+        <p><b>Contexte &amp; missions :</b> support à la gestion de production, création de documents, aide à l’organisation des plannings, inventaire des stocks au service de maintenance technique.</p>
+        <p><b>Compétences mises en œuvre :</b> organisation, rigueur, suivi de procédures.</p>
+        <p><b>Bilan :</b> première découverte du fonctionnement d’une entreprise industrielle.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer><p>© <span id="year"></span> Raphaël Beduneau</p></footer>
-  <script src="script.js"></script>
+  <section id="synth">
+    <h2>Synthèse des compétences</h2>
+    <div class="scroll">
+      <table>
+        <tr><th>Compétence</th><th>Type</th><th>Expérience(s)</th><th>Niveau (1-4)</th></tr>
+        <tr><td>Python, C++, HTML / CSS, JavaScript</td><td>Technique</td><td>Cursus ESAIP, projets perso</td><td>3</td></tr>
+        <tr><td>Réseaux (Wireshark, Cisco, TCP/IP, DNS, DHCP)</td><td>Technique</td><td>Cursus ESAIP, homelab</td><td>3</td></tr>
+        <tr><td>Administration Windows / Linux, VMware</td><td>Technique</td><td>Cursus ESAIP, homelab</td><td>3</td></tr>
+        <tr><td>Automates (PLC), IA, IoT</td><td>Technique</td><td>Erasmus, Fuste Carreras</td><td>2</td></tr>
+        <tr><td>Adaptabilité, initiative, curiosité</td><td>Comportementale</td><td>Erasmus, Fuste Carreras</td><td>4</td></tr>
+        <tr><td>Travail en équipe, autonomie</td><td>Transversale</td><td>Leclerc, Innov’Lab, SNU</td><td>3</td></tr>
+        <tr><td>Anglais (C1), espagnol (B1)</td><td>Transversale</td><td>Erasmus, Fuste Carreras</td><td>4 / 2</td></tr>
+      </table>
+    </div>
+    <h3>Mes 3 + 3 + 3</h3>
+    <span class="tag">Python</span><span class="tag">Réseaux</span><span class="tag">Admin Windows / Linux</span>
+    <span class="tag o">Adaptabilité</span><span class="tag o">Initiative</span><span class="tag o">Curiosité</span>
+    <span class="tag">Travail en équipe</span><span class="tag">Rigueur</span><span class="tag">Anglais</span>
+  </section>
+
+  <section id="metier">
+    <h2>Le métier que je vise</h2>
+    <h3>Métier : ingénieur cybersécurité / réseaux</h3>
+    <div class="scroll">
+      <table>
+        <tr><th>Compétence requise</th><th>Catégorie</th><th>Acquise ?</th><th>Plan d’action</th></tr>
+        <tr><td>Réseaux et protocoles</td><td>Technique</td><td>✅ Oui</td><td>—</td></tr>
+        <tr><td>Administration systèmes Windows / Linux</td><td>Technique</td><td>✅ Oui</td><td>—</td></tr>
+        <tr><td>Sécurité offensive et défensive</td><td>Technique</td><td>🟠 En cours</td><td>Cycle ingénieur cybersécurité, homelab, stage de juin 2027</td></tr>
+        <tr><td>Communication en anglais</td><td>Transversale</td><td>✅ Oui</td><td>—</td></tr>
+        <tr><td>Gestion de projet et de risques</td><td>Transversale</td><td>🟠 En cours</td><td>Projets Innov’Lab, cours de l’ESAIP</td></tr>
+        <tr><td>Certifications (ex. CCNA, Security+)</td><td>Technique</td><td>❌ À acquérir</td><td>Choisir une certification et la préparer</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="benevolat">
+    <h2>Engagements et loisirs</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>Trésorier – Innov’Lab</h3>
+        <p class="mut">Octobre 2026 – Octobre 2027</p>
+        <p>Gestion du budget, rédaction de documents officiels, projets de homelab, de sites web et projets étudiants.</p>
+        <p><b>Compétences développées :</b> gestion, rigueur, travail en équipe.</p>
+      </div>
+      <div class="box">
+        <h3>Service National Universel</h3>
+        <p class="mut">Juin – Juillet 2020</p>
+        <p>Cohésion de groupe, engagement civique et citoyenneté.</p>
+        <p><b>Compétences développées :</b> autonomie, travail en équipe.</p>
+      </div>
+      <div class="box">
+        <h3>Loisirs</h3>
+        <p>Piano, chorale, lecture, tennis de table.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>Mon CV et mes contacts</h2>
+    <p>Dernière mise à jour : <b>02/11/2026</b></p>
+    <p><a class="cv-link" href="cv.pdf">Télécharger mon CV (PDF)</a> <span class="mut">(place ton fichier <code>cv.pdf</code> à côté de <code>index.html</code>)</span></p>
+    <ul>
+      <li><a class="cv-link" href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a></li>
+      <li><a class="cv-link" href="tel:+33607218701">06 07 21 87 01</a></li>
+      <li><a class="cv-link" href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">linkedin.com/in/raphael-beduneau</a></li>
+      <li>Permis B</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>Raphaël Beduneau · ESAIP · <span id="year"></span></footer>
+
+<script src="script.js"></script>
 </body>
 </html>
