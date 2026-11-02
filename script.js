@@ -31,16 +31,6 @@ function save() {
   }
 }
 
-// Bouton Modifier / Terminer
-btnEdit.addEventListener("click", () => {
-  editing = !editing;
-  content.contentEditable = editing;
-  nom.contentEditable = editing;
-  document.body.classList.toggle("edit", editing);
-  btnEdit.textContent = editing ? "💾 Terminer" : "✏️ Modifier";
-  if (!editing) save();
-});
-
 content.addEventListener("input", save);
 nom.addEventListener("input", save);
 
