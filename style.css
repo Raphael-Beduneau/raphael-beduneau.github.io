@@ -67,21 +67,6 @@ nav a {
 
 nav a:hover, nav a.active { background: var(--ac); color: #fff; }
 
-button {
-  background: var(--ac2);
-  color: #fff;
-  border: 0;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-:root[data-theme="dark"] button { color: #07122b; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) button { color: #07122b; } }
-
-#btn-edit { margin-left: auto; white-space: nowrap; }
-
 /* En-tête */
 header {
   background: linear-gradient(135deg, #0b2a6b, #1f5eff);
