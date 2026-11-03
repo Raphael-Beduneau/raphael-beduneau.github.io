@@ -9,21 +9,6 @@
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
-  <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-6 6M12 11l6 6"/></symbol>
-  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></symbol>
-  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
-  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17.5 14c2.5 0 4 1.7 4 4.5"/></symbol>
-  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
-  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13.5c0-1.5 1-2.5 2.5-2.5S17 12 17 13.5V17"/></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16l1.5-5.5A2 2 0 018.4 9h7.2a2 2 0 011.9 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/><path d="M7 18h.01M17 18h.01"/></symbol>
-</svg>
-
 <nav aria-label="Navigation principale">
   <a href="#qui" data-i18n="n_qui">Profil</a>
   <a href="#exp" data-i18n="n_exp">Expériences</a>
@@ -100,7 +85,7 @@
     <article class="card entry">
       <div class="card-head">
         <div class="who">
-          <span class="logo" data-initials="FC">FC<img src="logos/fuste-carreras.png" alt="" onerror="this.remove()"></span>
+          <span class="logo">FC<img src="logos/fuste-carreras.png" alt="" onerror="this.remove()"></span>
           <div>
             <h4 data-i18n="stage">Stage ouvrier</h4>
             <p class="org">Fuste Carreras · Manresa – Barcelone, Espagne</p>
@@ -120,7 +105,7 @@
     <article class="card entry">
       <div class="card-head">
         <div class="who">
-          <span class="logo" data-initials="PO">PO<img src="logos/pomone.png" alt="" onerror="this.remove()"></span>
+          <span class="logo">PO<img src="logos/pomone.png" alt="" onerror="this.remove()"></span>
           <div>
             <h4 data-i18n="stage">Stage ouvrier</h4>
             <p class="org">Pomone · Avrillé (49)</p>
@@ -141,7 +126,7 @@
     <article class="card entry">
       <div class="card-head">
         <div class="who">
-          <span class="logo" data-initials="EL">EL<img src="logos/leclerc.png" alt="" onerror="this.remove()"></span>
+          <span class="logo">EL<img src="logos/leclerc.png" alt="" onerror="this.remove()"></span>
           <div>
             <h4 data-i18n="lc_job">Hôte de caisse et agent de location</h4>
             <p class="org">E. Leclerc Camus · Angers (49)</p>
@@ -167,108 +152,7 @@
     <div class="scroll">
       <table>
         <tr><th data-i18n="th_skill">Compétence</th><th data-i18n="th_type">Type</th><th data-i18n="th_exp">Expérience(s)</th></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="s1">Python, C++, HTML / CSS, JavaScript</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e1">Cursus ESAIP, projets perso</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-network"/></svg><span data-i18n="s2">Réseaux (Wireshark, Cisco, TCP/IP, DNS, DHCP)</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e2">Cursus ESAIP, homelab</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-server"/></svg><span data-i18n="s3">Administration Windows / Linux, VMware</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e2">Cursus ESAIP, homelab</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-cpu"/></svg><span data-i18n="s4">Automates (PLC), IA, IoT</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e3">Erasmus, Fuste Carreras</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg><span data-i18n="s5">Adaptabilité, initiative, curiosité</span></span></td><td data-i18n="ty_c">Comportementale</td><td data-i18n="e3">Erasmus, Fuste Carreras</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="s6">Travail en équipe, autonomie</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="e4">Leclerc, Innov’Lab, SNU</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="s7">Anglais (C1), espagnol (B1)</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="e3">Erasmus, Fuste Carreras</td></tr>
-      </table>
-    </div>
-
-    <h3 data-i18n="h_333">Mes 3 + 3 + 3</h3>
-    <div class="cards three">
-      <div class="card"><h4><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="c1t">Techniques</span></h4><p data-i18n="c1p">Python, réseaux, administration Windows / Linux</p></div>
-      <div class="card"><h4><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg><span data-i18n="c2t">Comportementales</span></h4><p data-i18n="c2p">Adaptabilité, initiative, curiosité</p></div>
-      <div class="card"><h4><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="c3t">Transversales</span></h4><p data-i18n="c3p">Travail en équipe, rigueur, anglais</p></div>
-    </div>
-  </section>
-
-  <section id="metier">
-    <h2 data-i18n="t_met">Métier visé</h2>
-    <p class="lead" data-i18n="l_met">Ingénieur cybersécurité / réseaux.</p>
-
-    <h3 data-i18n="h_gap">Écart entre le métier et mes compétences</h3>
-    <div class="scroll">
-      <table>
-        <tr><th data-i18n="g_th1">Compétence requise</th><th data-i18n="g_th2">Catégorie</th><th data-i18n="g_th3">Acquise ?</th><th data-i18n="g_th4">Plan d’action</th></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-network"/></svg><span data-i18n="g1">Réseaux et protocoles</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="yes">Oui</td><td>—</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-server"/></svg><span data-i18n="g2">Administration systèmes Windows / Linux</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="yes">Oui</td><td>—</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="g3">Sécurité offensive et défensive</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="ongoing">En cours</td><td data-i18n="plan1">Cycle ingénieur cybersécurité, homelab</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="g4">Communication en anglais</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="yes">Oui</td><td>—</td></tr>
-        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="g5">Gestion de projet et de risques</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="ongoing">En cours</td><td data-i18n="plan2">Projets Innov’Lab, cours de l’ESAIP</td></tr>
-      </table>
-    </div>
-  </section>
-
-  <section id="benevolat">
-    <h2 data-i18n="t_eng">Engagements et loisirs</h2>
-    <p class="lead" data-i18n="l_eng">Vie associative, citoyenneté et centres d’intérêt.</p>
-
-    <h3 data-i18n="h_engag">Engagements</h3>
-    <article class="card entry">
-      <div class="card-head">
-        <div class="who">
-          <span class="logo" data-initials="IL">IL<img src="logos/innovlab.png" alt="" onerror="this.remove()"></span>
-          <div>
-            <h4 data-i18n="treasurer">Trésorier</h4>
-            <p class="org">Association Innov’Lab</p>
-          </div>
-        </div>
-        <p class="date" data-i18n="innov_date">Octobre 2026 – octobre 2027</p>
-      </div>
-      <p class="about" data-i18n="innov_d">Association étudiante de l’ESAIP dédiée aux projets numériques (homelab, sites web, projets étudiants).</p>
-      <h5 data-i18n="lbl_m">Missions</h5>
-      <p data-i18n="innov_m">Gestion du budget, rédaction de documents officiels, projets de homelab, de sites web et projets étudiants.</p>
-      <h5 data-i18n="lbl_cd">Compétences développées</h5>
-      <p data-i18n="innov_c">Gestion, rigueur, travail en équipe.</p>
-    </article>
-
-    <article class="card entry">
-      <div class="card-head">
-        <div class="who">
-          <span class="logo" data-initials="SNU">SNU<img src="logos/snu.png" alt="" onerror="this.remove()"></span>
-          <div>
-            <h4 data-i18n="snu_t">Service National Universel</h4>
-            <p class="org" data-i18n="snu_org">Engagement citoyen</p>
-          </div>
-        </div>
-        <p class="date" data-i18n="snu_date">Juin – juillet 2020</p>
-      </div>
-      <p class="about" data-i18n="snu_d">Dispositif d’engagement citoyen proposé aux jeunes en France.</p>
-      <h5 data-i18n="lbl_m">Missions</h5>
-      <p data-i18n="snu_m">Cohésion de groupe, engagement civique et citoyenneté.</p>
-      <h5 data-i18n="lbl_cd">Compétences développées</h5>
-      <p data-i18n="snu_c">Autonomie, travail en équipe.</p>
-    </article>
-
-    <h3 data-i18n="h_loisirs">Loisirs</h3>
-    <div class="card"><p data-i18n="loisirs">Piano, chorale, lecture, tennis de table.</p></div>
-  </section>
-
-  <section id="cv">
-    <h2 data-i18n="t_cv">CV et contact</h2>
-    <p class="lead" data-i18n="l_cv">Me contacter ou télécharger mon CV.</p>
-
-    <h3 data-i18n="h_moncv">Mon CV</h3>
-    <div class="card"><p><a href="CV_Raphael_Beduneau_(FR).pdf" data-i18n="dl_cv">Télécharger mon CV (PDF)</a></p></div>
-
-    <h3 data-i18n="h_coord">Coordonnées</h3>
-    <div class="card">
-      <ul class="plain">
-        <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a></li>
-        <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+33607218701">06 07 21 87 01</a></li>
-        <li><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg><a href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">linkedin.com/in/raphael-beduneau</a></li>
-        <li><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg><span data-i18n="permis">Permis B</span></li>
-      </ul>
-    </div>
-  </section>
-
-</main>
-
-<footer>Raphaël Beduneau · ESAIP · <span id="year"></span></footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+        <tr><td><span class="skill" data-ic="code"><span data-i18n="s1">Python, C++, HTML / CSS, JavaScript</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e1">Cursus ESAIP, projets perso</td></tr>
+        <tr><td><span class="skill" data-ic="network"><span data-i18n="s2">Réseaux (Wireshark, Cisco, TCP/IP, DNS, DHCP)</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e2">Cursus ESAIP, homelab</td></tr>
+        <tr><td><span class="skill" data-ic="server"><span data-i18n="s3">Administration Windows / Linux, VMware</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e2">Cursus ESAIP, homelab</td></tr>
+        <tr><td><span class="skill" data-ic="cpu"><span data-i18n="s4">Automates (PLC), IA, IoT</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e3">Erasmus, Fuste Carreras</td></tr>

@@ -1,14 +1,33 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* ---------- Icônes (injectées via data-ic) ---------- */
+const IC = {
+  code:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+  network:'<circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-6 6M12 11l6 6"/>',
+  server:'<rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/>',
+  cpu:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+  compass:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17.5 14c2.5 0 4 1.7 4 4.5"/>',
+  globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/>',
+  shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+  phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>',
+  linkedin:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13.5c0-1.5 1-2.5 2.5-2.5S17 12 17 13.5V17"/>',
+  car:'<path d="M5 16l1.5-5.5A2 2 0 018.4 9h7.2a2 2 0 011.9 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/><path d="M7 18h.01M17 18h.01"/>',
+  piano:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M6 5v7h3V5M10.5 5v7h3V5M15 5v7h3V5M7.5 12v7M12 12v7M16.5 12v7"/>',
+  music:'<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+  book:'<path d="M2 5h6a4 4 0 014 4v11a3 3 0 00-3-3H2z"/><path d="M22 5h-6a4 4 0 00-4 4v11a3 3 0 013-3h7z"/>',
+  paddle:'<circle cx="9.5" cy="10" r="6.5"/><path d="M14 15l6 6"/><circle cx="19" cy="5" r="1.5"/>'
+};
+document.querySelectorAll('[data-ic]').forEach(e =>
+  e.insertAdjacentHTML('afterbegin', `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${IC[e.dataset.ic]}</svg>`));
+
 /* ---------- Navigation active ---------- */
 const links = [...document.querySelectorAll('nav a')];
-const sections = links.map(a => document.querySelector(a.getAttribute('href')));
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => s && io.observe(s));
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.hash === '#' + e.target.id));
+}), { rootMargin: '-40% 0px -55% 0px' });
+links.forEach(a => io.observe(document.querySelector(a.hash)));
 
 /* ---------- Traductions (le français est le texte du HTML) ---------- */
 const T = {
@@ -56,7 +75,7 @@ treasurer:"Treasurer",innov_d:"ESAIP student association focused on digital proj
 innov_m:"Budget management, drafting official documents, homelab, website and student projects.",innov_c:"Management, rigour, teamwork.",
 snu_t:"National Universal Service",snu_org:"Civic engagement",snu_d:"Civic engagement programme for young people in France.",snu_date:"June – July 2020",
 snu_m:"Group cohesion, civic engagement and citizenship.",snu_c:"Autonomy, teamwork.",
-h_loisirs:"Hobbies",loisirs:"Piano, choir, reading, table tennis.",
+h_loisirs:"Hobbies",l1:"Piano",l2:"Choir",l3:"Reading",l4:"Table tennis",
 t_cv:"CV and contact",l_cv:"Get in touch or download my CV.",h_moncv:"My CV",dl_cv:"Download my CV (PDF)",h_coord:"Contact details",permis:"Driving licence (B)"
 },
 es: {
@@ -103,24 +122,8 @@ treasurer:"Tesorero",innov_d:"Asociación estudiantil de ESAIP dedicada a proyec
 innov_m:"Gestión del presupuesto, redacción de documentos oficiales, homelab, sitios web y proyectos estudiantiles.",innov_c:"Gestión, rigor, trabajo en equipo.",
 snu_t:"Servicio Nacional Universal",snu_org:"Compromiso ciudadano",snu_d:"Programa de compromiso cívico para jóvenes en Francia.",snu_date:"Junio – julio de 2020",
 snu_m:"Cohesión de grupo, compromiso cívico y ciudadanía.",snu_c:"Autonomía, trabajo en equipo.",
-h_loisirs:"Aficiones",loisirs:"Piano, coro, lectura, tenis de mesa.",
+h_loisirs:"Aficiones",l1:"Piano",l2:"Coro",l3:"Lectura",l4:"Tenis de mesa",
 t_cv:"CV y contacto",l_cv:"Contáctame o descarga mi CV.",h_moncv:"Mi CV",dl_cv:"Descargar mi CV (PDF)",h_coord:"Datos de contacto",permis:"Carné de conducir (B)"
 }};
 
 const nodes = [...document.querySelectorAll('[data-i18n]')];
-nodes.forEach(n => n.dataset.fr = n.textContent);
-const frTitle = document.title;
-
-function setLang(l) {
-  nodes.forEach(n => { n.textContent = (l !== 'fr' && T[l][n.dataset.i18n]) || n.dataset.fr; });
-  document.title = l === 'fr' ? frTitle : T[l].title;
-  document.documentElement.lang = l;
-  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
-  try { localStorage.setItem('lang', l); } catch (e) {}
-}
-document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
-
-let start = 'fr';
-try { start = localStorage.getItem('lang') || ''; } catch (e) {}
-if (!T[start] && start !== 'fr') start = (navigator.language || 'fr').slice(0, 2);
-setLang(T[start] || start === 'fr' ? start : 'fr');
