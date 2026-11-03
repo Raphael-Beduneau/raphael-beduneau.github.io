@@ -4,33 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Raphaël Beduneau – Portfolio</title>
-  <meta name="description" content="Portfolio de Raphaël Beduneau, élève-ingénieur en cybersécurité à l’ESAIP, à la recherche d’un stage de 8 semaines dès juin 2027.">
+  <meta name="description" content="Portfolio de Raphaël Beduneau, élève-ingénieur en cybersécurité à l’ESAIP.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-6 6M12 11l6 6"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17.5 14c2.5 0 4 1.7 4 4.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13.5c0-1.5 1-2.5 2.5-2.5S17 12 17 13.5V17"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16l1.5-5.5A2 2 0 018.4 9h7.2a2 2 0 011.9 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/><path d="M7 18h.01M17 18h.01"/></symbol>
+</svg>
+
 <nav aria-label="Navigation principale">
-  <a href="#qui">Profil</a>
-  <a href="#exp">Expériences</a>
-  <a href="#synth">Compétences</a>
-  <a href="#metier">Métier visé</a>
-  <a href="#benevolat">Engagements</a>
-  <a href="#cv">Contact</a>
+  <a href="#qui" data-i18n="n_qui">Profil</a>
+  <a href="#exp" data-i18n="n_exp">Expériences</a>
+  <a href="#synth" data-i18n="n_synth">Compétences</a>
+  <a href="#metier" data-i18n="n_metier">Métier visé</a>
+  <a href="#benevolat" data-i18n="n_eng">Engagements</a>
+  <a href="#cv" data-i18n="n_contact">Contact</a>
+  <div class="lang" role="group" aria-label="Langue / Language / Idioma">
+    <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <button type="button" data-lang="es" aria-pressed="false">ES</button>
+  </div>
 </nav>
 
 <header>
   <div class="hero">
     <h1>Raphaël Beduneau</h1>
-    <p class="role">Élève-ingénieur en cybersécurité, ESAIP (Saint-Barthélemy-d’Anjou)</p>
-    <p class="sub">Recherche un stage de 8 semaines à partir de juin 2027.</p>
+    <p class="role" data-i18n="role">Élève-ingénieur en cybersécurité, ESAIP (Saint-Barthélemy-d’Anjou)</p>
     <div class="actions">
-      <a class="btn primary" href="CV_Raphael_Beduneau_(FR).pdf">Télécharger mon CV</a>
-      <a class="btn" href="#cv">Me contacter</a>
+      <a class="btn primary" href="CV_Raphael_Beduneau_(FR).pdf" data-i18n="b_cv">Télécharger mon CV</a>
+      <a class="btn" href="#cv" data-i18n="b_ct">Me contacter</a>
     </div>
     <dl class="facts">
-      <div><dt>Anglais</dt><dd>C1 · TOEIC 975/990</dd></div>
-      <div><dt>International</dt><dd>Erasmus (Finlande), stage (Espagne)</dd></div>
-      <div><dt>Domaines</dt><dd>Réseaux, systèmes, sécurité</dd></div>
+      <div><dt data-i18n="f_en">Anglais</dt><dd>C1 · TOEIC 975/990</dd></div>
+      <div><dt data-i18n="f_int">International</dt><dd data-i18n="f_int_v">Erasmus (Finlande), stage (Espagne)</dd></div>
+      <div><dt data-i18n="f_dom">Domaines</dt><dd data-i18n="f_dom_v">Réseaux, systèmes, sécurité</dd></div>
     </dl>
   </div>
 </header>
@@ -38,194 +57,214 @@
 <main>
 
   <section id="qui">
-    <h2>Profil</h2>
-    <p class="lead">Qui je suis, ce qui me motive et ce qui me distingue.</p>
+    <h2 data-i18n="t_qui">Profil</h2>
+    <p class="lead" data-i18n="l_qui">Qui je suis, ce qui me motive et ce qui me distingue.</p>
 
-    <h3>Présentation</h3>
-    <p>Étudiant en cycle ingénieur à l’ESAIP, j’ai suivi deux ans de cycle préparatoire en ingénierie numérique avant de me spécialiser en cybersécurité. Un semestre Erasmus en Finlande et un stage en Espagne m’ont appris à m’adapter vite à un nouvel environnement, en anglais comme en espagnol.</p>
+    <h3 data-i18n="h_pres">Présentation</h3>
+    <p data-i18n="p_pres">Étudiant en cycle ingénieur à l’ESAIP, j’ai suivi deux ans de cycle préparatoire en ingénierie numérique avant de me spécialiser en cybersécurité. Un semestre Erasmus en Finlande et un stage en Espagne m’ont appris à m’adapter vite à un nouvel environnement, en anglais comme en espagnol.</p>
 
-    <h3>Forces et axes de progrès</h3>
+    <h3 data-i18n="h_forces">Forces et axes de progrès</h3>
     <div class="cards two">
       <div class="card">
-        <h4>Points forts</h4>
-        <ul><li>Anglais courant (C1, TOEIC 975/990)</li><li>Adaptabilité : Erasmus en Finlande, stage en Espagne</li><li>Rigueur et esprit d’analyse</li></ul>
+        <h4 data-i18n="h_pf">Points forts</h4>
+        <ul><li data-i18n="pf1">Anglais courant (C1, TOEIC 975/990)</li><li data-i18n="pf2">Adaptabilité : Erasmus en Finlande, stage en Espagne</li><li data-i18n="pf3">Rigueur et esprit d’analyse</li></ul>
       </div>
       <div class="card">
-        <h4>Points d’attention</h4>
-        <ul><li>Espagnol à consolider (B1)</li><li>Expérience encore limitée en cybersécurité opérationnelle</li><li>Projets à mieux documenter en ligne</li></ul>
+        <h4 data-i18n="h_pa">Points d’attention</h4>
+        <ul><li data-i18n="pa1">Espagnol à consolider (B1)</li><li data-i18n="pa2">Expérience encore limitée en cybersécurité opérationnelle</li><li data-i18n="pa3">Projets à mieux documenter en ligne</li></ul>
       </div>
     </div>
 
-    <h3>Motivations et valeurs</h3>
+    <h3 data-i18n="h_mot">Motivations et valeurs</h3>
     <div class="cards two">
       <div class="card">
-        <h4>Pourquoi cette orientation ?</h4>
-        <p>Les réseaux et la sécurité des systèmes me passionnent. Je les pratique déjà avec un projet de homelab et au sein de l’association Innov’Lab.</p>
+        <h4 data-i18n="m1t">Pourquoi cette orientation ?</h4>
+        <p data-i18n="m1p">Les réseaux et la sécurité des systèmes me passionnent. Je les pratique déjà avec un projet de homelab et au sein de l’association Innov’Lab.</p>
       </div>
       <div class="card">
-        <h4>Ce qui me motive</h4>
-        <p>Comprendre comment un système fonctionne, puis le rendre plus fiable et plus sûr, en équipe et en suivant un cahier des charges.</p>
+        <h4 data-i18n="m2t">Ce qui me motive</h4>
+        <p data-i18n="m2p">Comprendre comment un système fonctionne, puis le rendre plus fiable et plus sûr, en équipe et en suivant un cahier des charges.</p>
       </div>
       <div class="card">
-        <h4>Un bon manager, c’est…</h4>
-        <p>Quelqu’un qui fixe un cadre clair, fait confiance et donne un retour franc.</p>
+        <h4 data-i18n="m3t">Un bon manager, c’est…</h4>
+        <p data-i18n="m3p">Quelqu’un qui fixe un cadre clair, fait confiance et donne un retour franc.</p>
       </div>
       <div class="card">
-        <h4>Ma différence</h4>
-        <p>Un profil réseaux et cybersécurité, nourri d’automatisation industrielle (PLC, IoT) et d’expériences à l’international.</p>
+        <h4 data-i18n="m4t">Ma différence</h4>
+        <p data-i18n="m4p">Un profil réseaux et cybersécurité, nourri d’automatisation industrielle (PLC, IoT) et d’expériences à l’international.</p>
       </div>
     </div>
   </section>
 
   <section id="exp">
-    <h2>Expériences professionnelles</h2>
-    <p class="lead">Stages et emplois, du plus récent au plus ancien.</p>
+    <h2 data-i18n="t_exp">Expériences professionnelles</h2>
+    <p class="lead" data-i18n="l_exp">Stages et emplois, du plus récent au plus ancien.</p>
 
-    <h3>Stages</h3>
+    <h3 data-i18n="h_stages">Stages</h3>
     <article class="card entry">
       <div class="card-head">
-        <div>
-          <h4>Stage ouvrier</h4>
-          <p class="org">Fuste Carreras · Manresa – Barcelone, Espagne</p>
+        <div class="who">
+          <span class="logo" data-initials="FC">FC<img src="logos/fuste-carreras.png" alt="" onerror="this.remove()"></span>
+          <div>
+            <h4 data-i18n="stage">Stage ouvrier</h4>
+            <p class="org">Fuste Carreras · Manresa – Barcelone, Espagne</p>
+          </div>
         </div>
-        <p class="date">Juin – Juillet 2026</p>
+        <p class="date" data-i18n="fc_date">Juin – Juillet 2026</p>
       </div>
-      <h5>Missions</h5>
-      <p>Aide à la migration d’ERP vers un nouveau système. Identification de tâches répétitives et automatisation avec l’IA. Observation des flux en atelier et pistes d’amélioration de la production.</p>
-      <h5>Compétences mises en œuvre</h5>
-      <p>Analyse, automatisation, rigueur, communication en espagnol et en anglais.</p>
-      <h5>Bilan</h5>
-      <p>J’ai appris à travailler dans un environnement étranger et à proposer des solutions à partir de constats concrets.</p>
+      <p class="about" data-i18n="fc_d">Entreprise industrielle catalane basée à Manresa, près de Barcelone.</p>
+      <h5 data-i18n="lbl_m">Missions</h5>
+      <p data-i18n="fc_m">Aide à la migration d’ERP vers un nouveau système. Identification de tâches répétitives et automatisation avec l’IA. Observation des flux en atelier et pistes d’amélioration de la production.</p>
+      <h5 data-i18n="lbl_c">Compétences mises en œuvre</h5>
+      <p data-i18n="fc_c">Analyse, automatisation, rigueur, communication en espagnol et en anglais.</p>
+      <h5 data-i18n="lbl_b">Bilan</h5>
+      <p data-i18n="fc_b">J’ai appris à travailler dans un environnement étranger et à proposer des solutions à partir de constats concrets.</p>
     </article>
 
     <article class="card entry">
       <div class="card-head">
-        <div>
-          <h4>Stage ouvrier</h4>
-          <p class="org">Pomone · Avrillé (49)</p>
+        <div class="who">
+          <span class="logo" data-initials="PO">PO<img src="logos/pomone.png" alt="" onerror="this.remove()"></span>
+          <div>
+            <h4 data-i18n="stage">Stage ouvrier</h4>
+            <p class="org">Pomone · Avrillé (49)</p>
+          </div>
         </div>
-        <p class="date">Février 2024</p>
+        <p class="date" data-i18n="pm_date">Février 2024</p>
       </div>
-      <h5>Missions</h5>
-      <p>Support à la gestion de production, création de documents, aide à l’organisation des plannings, inventaire des stocks au service de maintenance technique.</p>
-      <h5>Compétences mises en œuvre</h5>
-      <p>Organisation, rigueur, suivi de procédures.</p>
-      <h5>Bilan</h5>
-      <p>Première découverte du fonctionnement d’une entreprise industrielle.</p>
+      <p class="about" data-i18n="pm_d">Entreprise industrielle implantée à Avrillé, près d’Angers.</p>
+      <h5 data-i18n="lbl_m">Missions</h5>
+      <p data-i18n="pm_m">Support à la gestion de production, création de documents, aide à l’organisation des plannings, inventaire des stocks au service de maintenance technique.</p>
+      <h5 data-i18n="lbl_c">Compétences mises en œuvre</h5>
+      <p data-i18n="pm_c">Organisation, rigueur, suivi de procédures.</p>
+      <h5 data-i18n="lbl_b">Bilan</h5>
+      <p data-i18n="pm_b">Première découverte du fonctionnement d’une entreprise industrielle.</p>
     </article>
 
-    <h3>Emplois</h3>
+    <h3 data-i18n="h_emplois">Emplois</h3>
     <article class="card entry">
       <div class="card-head">
-        <div>
-          <h4>Hôte de caisse et agent de location</h4>
-          <p class="org">E. Leclerc Camus · Angers (49)</p>
+        <div class="who">
+          <span class="logo" data-initials="EL">EL<img src="logos/leclerc.png" alt="" onerror="this.remove()"></span>
+          <div>
+            <h4 data-i18n="lc_job">Hôte de caisse et agent de location</h4>
+            <p class="org">E. Leclerc Camus · Angers (49)</p>
+          </div>
         </div>
-        <p class="date">Été 2024, puis septembre 2024 – septembre 2025</p>
+        <p class="date" data-i18n="lc_date">Été 2024, puis septembre 2024 – septembre 2025</p>
       </div>
-      <h5>Missions</h5>
-      <p>Gestion des locations au service location, puis poste de caisse : accueil et service client, manutention.</p>
-      <h5>Compétences mises en œuvre</h5>
-      <p>Relation client, polyvalence, travail en équipe.</p>
-      <h5>Bilan</h5>
-      <p>Un an d’emploi en parallèle des études, qui m’a donné de la régularité et le sens du service.</p>
+      <p class="about" data-i18n="lc_d">Enseigne de grande distribution : hypermarché à Angers, avec un service location.</p>
+      <h5 data-i18n="lbl_m">Missions</h5>
+      <p data-i18n="lc_m">Gestion des locations au service location, puis poste de caisse : accueil et service client, manutention.</p>
+      <h5 data-i18n="lbl_c">Compétences mises en œuvre</h5>
+      <p data-i18n="lc_c">Relation client, polyvalence, travail en équipe.</p>
+      <h5 data-i18n="lbl_b">Bilan</h5>
+      <p data-i18n="lc_b">Un an d’emploi en parallèle des études, qui m’a donné de la régularité et le sens du service.</p>
     </article>
   </section>
 
   <section id="synth">
-    <h2>Compétences</h2>
-    <p class="lead">Ce que je sais faire et où je l’ai développé.</p>
+    <h2 data-i18n="t_synth">Compétences</h2>
+    <p class="lead" data-i18n="l_synth">Ce que je sais faire et où je l’ai développé.</p>
 
-    <h3>Tableau de synthèse</h3>
+    <h3 data-i18n="h_tab">Tableau de synthèse</h3>
     <div class="scroll">
       <table>
-        <tr><th>Compétence</th><th>Type</th><th>Expérience(s)</th></tr>
-        <tr><td>Python, C++, HTML / CSS, JavaScript</td><td>Technique</td><td>Cursus ESAIP, projets perso</td></tr>
-        <tr><td>Réseaux (Wireshark, Cisco, TCP/IP, DNS, DHCP)</td><td>Technique</td><td>Cursus ESAIP, homelab</td></tr>
-        <tr><td>Administration Windows / Linux, VMware</td><td>Technique</td><td>Cursus ESAIP, homelab</td></tr>
-        <tr><td>Automates (PLC), IA, IoT</td><td>Technique</td><td>Erasmus, Fuste Carreras</td></tr>
-        <tr><td>Adaptabilité, initiative, curiosité</td><td>Comportementale</td><td>Erasmus, Fuste Carreras</td></tr>
-        <tr><td>Travail en équipe, autonomie</td><td>Transversale</td><td>Leclerc, Innov’Lab, SNU</td></tr>
-        <tr><td>Anglais (C1), espagnol (B1)</td><td>Transversale</td><td>Erasmus, Fuste Carreras</td></tr>
+        <tr><th data-i18n="th_skill">Compétence</th><th data-i18n="th_type">Type</th><th data-i18n="th_exp">Expérience(s)</th></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="s1">Python, C++, HTML / CSS, JavaScript</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e1">Cursus ESAIP, projets perso</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-network"/></svg><span data-i18n="s2">Réseaux (Wireshark, Cisco, TCP/IP, DNS, DHCP)</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e2">Cursus ESAIP, homelab</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-server"/></svg><span data-i18n="s3">Administration Windows / Linux, VMware</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e2">Cursus ESAIP, homelab</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-cpu"/></svg><span data-i18n="s4">Automates (PLC), IA, IoT</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="e3">Erasmus, Fuste Carreras</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg><span data-i18n="s5">Adaptabilité, initiative, curiosité</span></span></td><td data-i18n="ty_c">Comportementale</td><td data-i18n="e3">Erasmus, Fuste Carreras</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="s6">Travail en équipe, autonomie</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="e4">Leclerc, Innov’Lab, SNU</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="s7">Anglais (C1), espagnol (B1)</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="e3">Erasmus, Fuste Carreras</td></tr>
       </table>
     </div>
 
-    <h3>Mes 3 + 3 + 3</h3>
+    <h3 data-i18n="h_333">Mes 3 + 3 + 3</h3>
     <div class="cards three">
-      <div class="card"><h4>Techniques</h4><p>Python, réseaux, administration Windows / Linux</p></div>
-      <div class="card"><h4>Comportementales</h4><p>Adaptabilité, initiative, curiosité</p></div>
-      <div class="card"><h4>Transversales</h4><p>Travail en équipe, rigueur, anglais</p></div>
+      <div class="card"><h4><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="c1t">Techniques</span></h4><p data-i18n="c1p">Python, réseaux, administration Windows / Linux</p></div>
+      <div class="card"><h4><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg><span data-i18n="c2t">Comportementales</span></h4><p data-i18n="c2p">Adaptabilité, initiative, curiosité</p></div>
+      <div class="card"><h4><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="c3t">Transversales</span></h4><p data-i18n="c3p">Travail en équipe, rigueur, anglais</p></div>
     </div>
   </section>
 
   <section id="metier">
-    <h2>Métier visé</h2>
-    <p class="lead">Ingénieur cybersécurité / réseaux.</p>
+    <h2 data-i18n="t_met">Métier visé</h2>
+    <p class="lead" data-i18n="l_met">Ingénieur cybersécurité / réseaux.</p>
 
-    <h3>Écart entre le métier et mes compétences</h3>
+    <h3 data-i18n="h_gap">Écart entre le métier et mes compétences</h3>
     <div class="scroll">
       <table>
-        <tr><th>Compétence requise</th><th>Catégorie</th><th>Acquise ?</th><th>Plan d’action</th></tr>
-        <tr><td>Réseaux et protocoles</td><td>Technique</td><td>Oui</td><td>—</td></tr>
-        <tr><td>Administration systèmes Windows / Linux</td><td>Technique</td><td>Oui</td><td>—</td></tr>
-        <tr><td>Sécurité offensive et défensive</td><td>Technique</td><td>En cours</td><td>Cycle ingénieur cybersécurité, homelab, stage de juin 2027</td></tr>
-        <tr><td>Communication en anglais</td><td>Transversale</td><td>Oui</td><td>—</td></tr>
-        <tr><td>Gestion de projet et de risques</td><td>Transversale</td><td>En cours</td><td>Projets Innov’Lab, cours de l’ESAIP</td></tr>
+        <tr><th data-i18n="g_th1">Compétence requise</th><th data-i18n="g_th2">Catégorie</th><th data-i18n="g_th3">Acquise ?</th><th data-i18n="g_th4">Plan d’action</th></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-network"/></svg><span data-i18n="g1">Réseaux et protocoles</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="yes">Oui</td><td>—</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-server"/></svg><span data-i18n="g2">Administration systèmes Windows / Linux</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="yes">Oui</td><td>—</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="g3">Sécurité offensive et défensive</span></span></td><td data-i18n="ty_t">Technique</td><td data-i18n="ongoing">En cours</td><td data-i18n="plan1">Cycle ingénieur cybersécurité, homelab</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span data-i18n="g4">Communication en anglais</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="yes">Oui</td><td>—</td></tr>
+        <tr><td><span class="skill"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="g5">Gestion de projet et de risques</span></span></td><td data-i18n="ty_tr">Transversale</td><td data-i18n="ongoing">En cours</td><td data-i18n="plan2">Projets Innov’Lab, cours de l’ESAIP</td></tr>
       </table>
     </div>
   </section>
 
   <section id="benevolat">
-    <h2>Engagements et loisirs</h2>
-    <p class="lead">Vie associative, citoyenneté et centres d’intérêt.</p>
+    <h2 data-i18n="t_eng">Engagements et loisirs</h2>
+    <p class="lead" data-i18n="l_eng">Vie associative, citoyenneté et centres d’intérêt.</p>
 
-    <h3>Engagements</h3>
+    <h3 data-i18n="h_engag">Engagements</h3>
     <article class="card entry">
       <div class="card-head">
-        <div>
-          <h4>Trésorier</h4>
-          <p class="org">Association Innov’Lab</p>
+        <div class="who">
+          <span class="logo" data-initials="IL">IL<img src="logos/innovlab.png" alt="" onerror="this.remove()"></span>
+          <div>
+            <h4 data-i18n="treasurer">Trésorier</h4>
+            <p class="org">Association Innov’Lab</p>
+          </div>
         </div>
-        <p class="date">Octobre 2026 – octobre 2027</p>
+        <p class="date" data-i18n="innov_date">Octobre 2026 – octobre 2027</p>
       </div>
-      <h5>Missions</h5>
-      <p>Gestion du budget, rédaction de documents officiels, projets de homelab, de sites web et projets étudiants.</p>
-      <h5>Compétences développées</h5>
-      <p>Gestion, rigueur, travail en équipe.</p>
+      <p class="about" data-i18n="innov_d">Association étudiante de l’ESAIP dédiée aux projets numériques (homelab, sites web, projets étudiants).</p>
+      <h5 data-i18n="lbl_m">Missions</h5>
+      <p data-i18n="innov_m">Gestion du budget, rédaction de documents officiels, projets de homelab, de sites web et projets étudiants.</p>
+      <h5 data-i18n="lbl_cd">Compétences développées</h5>
+      <p data-i18n="innov_c">Gestion, rigueur, travail en équipe.</p>
     </article>
 
     <article class="card entry">
       <div class="card-head">
-        <div>
-          <h4>Service National Universel</h4>
-          <p class="org">Engagement citoyen</p>
+        <div class="who">
+          <span class="logo" data-initials="SNU">SNU<img src="logos/snu.png" alt="" onerror="this.remove()"></span>
+          <div>
+            <h4 data-i18n="snu_t">Service National Universel</h4>
+            <p class="org" data-i18n="snu_org">Engagement citoyen</p>
+          </div>
         </div>
-        <p class="date">Juin – juillet 2020</p>
+        <p class="date" data-i18n="snu_date">Juin – juillet 2020</p>
       </div>
-      <h5>Missions</h5>
-      <p>Cohésion de groupe, engagement civique et citoyenneté.</p>
-      <h5>Compétences développées</h5>
-      <p>Autonomie, travail en équipe.</p>
+      <p class="about" data-i18n="snu_d">Dispositif d’engagement citoyen proposé aux jeunes en France.</p>
+      <h5 data-i18n="lbl_m">Missions</h5>
+      <p data-i18n="snu_m">Cohésion de groupe, engagement civique et citoyenneté.</p>
+      <h5 data-i18n="lbl_cd">Compétences développées</h5>
+      <p data-i18n="snu_c">Autonomie, travail en équipe.</p>
     </article>
 
-    <h3>Loisirs</h3>
-    <div class="card"><p>Piano, chorale, lecture, tennis de table.</p></div>
+    <h3 data-i18n="h_loisirs">Loisirs</h3>
+    <div class="card"><p data-i18n="loisirs">Piano, chorale, lecture, tennis de table.</p></div>
   </section>
 
   <section id="cv">
-    <h2>CV et contact</h2>
-    <p class="lead">Me contacter ou télécharger mon CV.</p>
+    <h2 data-i18n="t_cv">CV et contact</h2>
+    <p class="lead" data-i18n="l_cv">Me contacter ou télécharger mon CV.</p>
 
-    <h3>Mon CV</h3>
-    <div class="card"><p><a href="CV_Raphael_Beduneau_(FR).pdf">Télécharger mon CV (PDF)</a></p></div>
+    <h3 data-i18n="h_moncv">Mon CV</h3>
+    <div class="card"><p><a href="CV_Raphael_Beduneau_(FR).pdf" data-i18n="dl_cv">Télécharger mon CV (PDF)</a></p></div>
 
-    <h3>Coordonnées</h3>
+    <h3 data-i18n="h_coord">Coordonnées</h3>
     <div class="card">
       <ul class="plain">
-        <li><a href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a></li>
-        <li><a href="tel:+33607218701">06 07 21 87 01</a></li>
-        <li><a href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">linkedin.com/in/raphael-beduneau</a></li>
-        <li>Permis B</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:raphael.beduneau491@gmail.com">raphael.beduneau491@gmail.com</a></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+33607218701">06 07 21 87 01</a></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-linkedin"/></svg><a href="https://www.linkedin.com/in/raphael-beduneau" target="_blank" rel="noopener">linkedin.com/in/raphael-beduneau</a></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg><span data-i18n="permis">Permis B</span></li>
       </ul>
     </div>
   </section>
