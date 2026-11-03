@@ -58,6 +58,13 @@ ul.plain a{overflow-wrap:anywhere}
 .cards .card{margin:0}
 .hobby{display:flex;align-items:center;gap:12px}
 .hobby .ic{width:1.5em;height:1.5em}
+.detail{margin:2px 0 0;color:var(--mut);font-size:14px;font-style:italic}
+
+/* Sélecteur de langue du CV */
+.cv-lang{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.cv-lang button{font:inherit;font-size:13px;font-weight:700;padding:6px 10px;border:1px solid var(--bd);border-radius:6px;background:transparent;color:var(--mut);cursor:pointer}
+.cv-lang button:hover{color:var(--tx)}
+.cv-lang button[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:var(--bg)}
 .entry{border-left:4px solid var(--ac)}
 .card-head{display:flex;justify-content:space-between;gap:4px 24px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--bd)}
 .card-head h4{margin:0;font-size:18px}

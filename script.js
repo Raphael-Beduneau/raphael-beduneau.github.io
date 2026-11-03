@@ -59,6 +59,7 @@ innov_m:"Budget management, drafting official documents, homelab, website and st
 snu_t:"National Universal Service",snu_org:"Civic engagement",snu_d:"Civic engagement programme for young people in France.",snu_date:"June – July 2020",
 snu_m:"Group cohesion, civic engagement and citizenship.",snu_c:"Autonomy, teamwork.",
 h_loisirs:"Hobbies",lo1:"Piano",lo2:"Choir",lo3:"Reading",lo4:"Table tennis",
+lo1d:"…",lo2d:"…",lo3d:"…",lo4d:"…",
 t_cv:"CV and contact",l_cv:"Get in touch or download my CV.",h_moncv:"My CV",dl_cv:"Download my CV (PDF)",h_coord:"Contact details",permis:"Driving licence (B)"
 },
 es: {
@@ -107,6 +108,7 @@ innov_m:"Gestión del presupuesto, redacción de documentos oficiales, homelab, 
 snu_t:"Servicio Nacional Universal",snu_org:"Compromiso ciudadano",snu_d:"Programa de compromiso cívico para jóvenes en Francia.",snu_date:"Junio – julio de 2020",
 snu_m:"Cohesión de grupo, compromiso cívico y ciudadanía.",snu_c:"Autonomía, trabajo en equipo.",
 h_loisirs:"Aficiones",lo1:"Piano",lo2:"Coro",lo3:"Lectura",lo4:"Tenis de mesa",
+lo1d:"…",lo2d:"…",lo3d:"…",lo4d:"…",
 t_cv:"CV y contacto",l_cv:"Contáctame o descarga mi CV.",h_moncv:"Mi CV",dl_cv:"Descargar mi CV (PDF)",h_coord:"Datos de contacto",permis:"Carné de conducir (B)"
 }};
 
@@ -129,3 +131,10 @@ let start = 'fr';
 try { start = localStorage.getItem('lang') || ''; } catch (e) {}
 if (!T[start] && start !== 'fr') start = (navigator.language || 'fr').slice(0, 2);
 setLang(T[start] || start === 'fr' ? start : 'fr');
+
+/* ---------- CV : choisir la langue du PDF à télécharger ---------- */
+const cvLink = document.getElementById('cv-link');
+document.querySelectorAll('.cv-lang button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.cv-lang button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  cvLink.href = 'CV_Raphael_Beduneau_(' + b.dataset.cv + ').pdf';
+}));
