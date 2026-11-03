@@ -59,7 +59,7 @@ innov_m:"Budget management, drafting official documents, homelab, website and st
 snu_t:"National Universal Service",snu_org:"Civic engagement",snu_d:"Civic engagement programme for young people in France.",snu_date:"June – July 2020",
 snu_m:"Group cohesion, civic engagement and citizenship.",snu_c:"Autonomy, teamwork.",
 h_loisirs:"Hobbies",lo1:"Piano",lo2:"Choir",lo3:"Reading",lo4:"Table tennis",
-lo1d:"…",lo2d:"…",lo3d:"…",lo4d:"…",
+lo1d:"4 years of music theory and instrumental practice",lo2d:"1 year at Vox Campus",lo3d:"novels, comic books, etc.",lo4d:"6 years of practice",
 t_cv:"CV and contact",l_cv:"Get in touch or download my CV.",h_moncv:"My CV",dl_cv:"Download my CV (PDF)",h_coord:"Contact details",permis:"Driving licence (B)"
 },
 es: {
@@ -108,7 +108,7 @@ innov_m:"Gestión del presupuesto, redacción de documentos oficiales, homelab, 
 snu_t:"Servicio Nacional Universal",snu_org:"Compromiso ciudadano",snu_d:"Programa de compromiso cívico para jóvenes en Francia.",snu_date:"Junio – julio de 2020",
 snu_m:"Cohesión de grupo, compromiso cívico y ciudadanía.",snu_c:"Autonomía, trabajo en equipo.",
 h_loisirs:"Aficiones",lo1:"Piano",lo2:"Coro",lo3:"Lectura",lo4:"Tenis de mesa",
-lo1d:"…",lo2d:"…",lo3d:"…",lo4d:"…",
+lo1d:"4 años de solfeo y práctica instrumental",lo2d:"1 año en Vox Campus",lo3d:"novelas, cómics, etc.",lo4d:"6 años de práctica",
 t_cv:"CV y contacto",l_cv:"Contáctame o descarga mi CV.",h_moncv:"Mi CV",dl_cv:"Descargar mi CV (PDF)",h_coord:"Datos de contacto",permis:"Carné de conducir (B)"
 }};
 
